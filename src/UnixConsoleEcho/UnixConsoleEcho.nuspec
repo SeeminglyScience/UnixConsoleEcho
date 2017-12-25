@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>UnixConsoleEcho</id>
+    <version>0.1.0.0</version>
+    <title>UnixConsoleEcho</title>
+    <authors>Patrick Meinecke</authors>
+    <owners>Patrick Meinecke</owners>
+    <licenseUrl>https://github.com/SeeminglyScience/UnixConsoleEcho/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/SeeminglyScience/UnixConsoleEcho</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A small library for disabling console input echo in Unix.</description>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.1" />
+      <group targetFramework=".NETFramework4.6.1">
+        <dependency id="System.Runtime.InteropServices.RuntimeInformation" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+      <group targetFramework=".NETStandard1.1">
+        <dependency id="NETStandard.Library" version="1.6.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="../Native/Unix/build/libdisablekeyecho.so" target="runtimes/linux-64/native" />
+    <file src="../Native/Unix/build/libdisablekeyecho.dylib" target="runtimes/osx-64/native" />
+    <file src="bin/Release/netstandard1.1/UnixConsoleEcho.dll" target="lib/netstandard1.1" />
+    <file src="bin/Release/netstandard1.1/UnixConsoleEcho.xml" target="lib/netstandard1.1" />
+    <file src="bin/Release/net451/UnixConsoleEcho.dll" target="lib/net451" />
+    <file src="bin/Release/net451/UnixConsoleEcho.xml" target="lib/net451" />
+    <file src="bin/Release/net461/UnixConsoleEcho.dll" target="lib/net461" />
+    <file src="bin/Release/net461/UnixConsoleEcho.xml" target="lib/net461" />
+    <file src="UnixConsoleEcho.targets" target="build/net461" />
+  </files>
+</package>
