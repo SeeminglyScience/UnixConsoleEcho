@@ -41,7 +41,7 @@ task BuildNative {
     }
 
     # If not Windows or Linux then assume MacOS
-    g++ -dynamiclib -o $PSScriptRoot/src/Native/Unix/build/libdisablekeyecho.dylib $PSScriptRoot/src/Native/Unix/disable_key_echo.cpp
+    g++ -dynamiclib -o $PSScriptRoot/src/Native/Unix/build/libdisablekeyecho.dylib $PSScriptRoot/src/Native/Unix/disable_key_echo.cpp -std=c++0x
 }
 
 task DoPack {
