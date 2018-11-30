@@ -25,7 +25,7 @@ namespace UnixConsoleEcho
                 return;
             }
 
-            InitializeConsoleBeforeRead(0, 10);
+            InitializeConsoleBeforeRead();
         }
 
         /// <summary>
